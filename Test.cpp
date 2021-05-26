@@ -28,18 +28,18 @@ TEST_CASE("GOOD TREE"){
     size_t index =0;
     cout<<Int_Tree<<endl;
     for(int& a : Int_Tree){
-      cout<<a<<" ";
+      
       CHECK_EQ(inorder.at(index++),a);
     }
     index=0;
     for(auto it=Int_Tree.begin_preorder(); it!=Int_Tree.end_preorder(); ++it){
-      cout<<*it<<" ";
-      CHECK_EQ(inorder.at(index++),*it);
+      
+      CHECK_EQ(preorder.at(index++),*it);
     }
     index=0;
     for(auto it=Int_Tree.begin_postorder(); it!=Int_Tree.end_postorder(); ++it){
-      cout<<*it<<" ";
-      CHECK_EQ(inorder.at(index++),*it);
+      
+      CHECK_EQ(postorder.at(index++),*it);
     }
   
 
